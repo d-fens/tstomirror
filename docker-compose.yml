@@ -1,0 +1,6 @@
+---
+services:
+  mirror:
+    image: ghcr.io/d-fens/tstomirror:main
+    volumes:
+      - .:/app
