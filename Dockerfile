@@ -7,6 +7,6 @@ ENV PYTHONUNBUFFERED=1
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY tstomirror.py .
+COPY . .
 
 CMD ["python", "tstomirror.py"]
