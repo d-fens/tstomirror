@@ -54,10 +54,10 @@ def check_file_ok(filename, delete=True):
   if os.path.exists(filename) and filename.endswith(".zip"):
     if not zipfile.is_zipfile(filename):
       if delete:
-        os.remove(f)  # delete invalid file
-        logging.warning("Invalid zipfile (deleting) for %s", url)
+        os.remove(filename)  # delete invalid file
+        logging.warning("Invalid zipfile (deleting) for %s", filename)
       else:
-        logging.warning("Invalid zipfile for %s", url)
+        logging.warning("Invalid zipfile for %s", filename)
       return False
 
     # TODO: crc32 check against xml value
