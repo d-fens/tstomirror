@@ -68,7 +68,7 @@ def check_file_ok(filename, delete=True):
 
 # basic download file but to a replica folder so that mirroring the data later is easier
 # this does not resume the data so there may be issues and improvments TODO: potential bugs
-def mirror_file(url, cache=True, output_dir="/output/static/"):
+def mirror_file(url, cache=True, output_dir="/output/"):
   o = urlparse(url)
   f = output_dir + o.netloc + o.path
 
